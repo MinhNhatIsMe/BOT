@@ -18,4 +18,4 @@ control.help.start(bot, botPrefix);
 control.covid.start(bot, botPrefix);
 control.news.start(bot, botPrefix, rssToJsonApiKey);
 
-bot.start(8080);
+bot.start(9900);
