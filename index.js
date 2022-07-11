@@ -60,7 +60,7 @@ app.post('/webhook', function (req, res) {
 
 
 function sendMessage(senderId, message) {
-    let json = JSON.parse({
+    let json = JSON.stringify({
         recipient: {
             id: senderId
         },
