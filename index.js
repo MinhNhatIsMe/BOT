@@ -1,5 +1,5 @@
 const express = require('express');
-const http = require('http');
+const http = require('https');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const request = require("request");
@@ -42,14 +42,15 @@ app.get('/webhook', function (req, res) {
 
 
 app.post('/webhook', function (req, res) { // Phần sử lý tin nhắn của người dùng gửi đến
-    var entries = req.body.entry;
-    for (var entry of entries) {
-        var messaging = entry.messaging;
-        for (var message of messaging) {
-            var senderId = message.sender.id;
+    res.setHeader('Content-Type', 'application/json');
+    let entries = req.body.entry;
+    for (let entry of entries) {
+        let messaging = entry.messaging;
+        for (let message of messaging) {
+            let senderId = message.sender.id;
             if (message.message) {
                 if (message.message.text) {
-                    var text = message.message.text;
+                    lettext = message.message.text;
                     sendMessage(senderId, "Hello!! I'm a bot. Your message: " + text);
                 }
             }
