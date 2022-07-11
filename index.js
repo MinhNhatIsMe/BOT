@@ -50,7 +50,7 @@ app.post('/webhook', function (req, res) { // Phần sử lý tin nhắn của n
             let senderId = message.sender.id;
             if (message.message) {
                 if (message.message.text) {
-                    lettext = message.message.text;
+                    let text = message.message.text;
                     sendMessage(senderId, "Hello!! I'm a bot. Your message: " + text);
                 }
             }
