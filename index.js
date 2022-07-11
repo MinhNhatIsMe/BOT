@@ -69,7 +69,11 @@ function sendMessage(senderId, message) {
         },
     });
 
-    axios.post(`https://graph.facebook.com/v2.6/me/messages?access_token=${pageAccessToken}`, json);
+    axios.post(`https://graph.facebook.com/v2.6/me/messages?access_token=${pageAccessToken}`, json).then(response => {
+        console.log(response.data);
+    }).then(err => {
+        console.log(err);
+    });
 }
 
 server.listen(26000);
