@@ -11,6 +11,7 @@
     "facebook-chat-api": "^1.8.0",
     "fca-c3c": "^1.0.1",
     "figlet": "^1.5.2",
+    "fs": "^0.0.1-security",
     "i": "^0.3.7",
     "messenger-bot": "^2.5.0",
     "nodemon": "^2.0.19",
